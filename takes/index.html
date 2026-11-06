@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Takes checklist · José Delfim</title>
+<style>body{margin:0;font:17px/1.5 system-ui,sans-serif;color:#1c1c1c;background:#fafafa}main{max-width:680px;margin:0 auto;padding:48px 20px 64px}h1{font-size:1.8rem;margin:0 0 4px}.sub{color:#555;margin:0 0 24px}p{margin:0 0 16px}a{color:#0b57a4}pre{background:#f0f0f0;border:1px solid #ddd;padding:12px;font-size:.9rem;overflow:auto}table{border-collapse:collapse;margin:16px 0;font-size:.95rem}td,th{border:1px solid #ddd;padding:6px 10px;text-align:left}th{background:#eee}</style></head>
+<body><main>
+<h1>Takes checklist</h1>
+<p class="sub">A spreadsheet that reads the shooting notes and organizes every take for the whole team · Google Sheets + script</p>
+<p>On a shoot, someone writes down what was filmed in a plain notes file: scene, place, light, camera card. That is fast on set, but useless later when the editor asks "do we have the sunrise shot?".</p>
+<p>I built a spreadsheet that pulls from that notes file by itself, splits each line into fields, removes technical duplicates and sorts everything by date. The team gets one clean checklist: what was captured, where, in which light, on which card. Nobody retypes anything.</p>
+<p>Sample of what a notes line becomes (fictional data):</p>
+<pre>08/16 - wide shot of the old bridge at sunset, people walking, lamps turning on - card01</pre>
+<table><tr><th>Date</th><th>Scene</th><th>Place</th><th>Light</th><th>File</th></tr>
+<tr><td>08/16</td><td>Wide shot of the old bridge, people walking, lamps turning on</td><td>Old town, bridge</td><td>Sunset</td><td>card01</td></tr>
+<tr><td>08/17</td><td>Harvest close-ups, workers on the truck</td><td>Farm</td><td>Morning</td><td>card02</td></tr></table>
+<p>In the production it was built for, it catalogued a few hundred takes and became the reference the whole crew used to check coverage before wrapping a location.</p>
+<p><a href="/">← Back</a> · <a href="/zezoffice/">ZezOffice</a> · <a href="/ezfuze/">EzFuze</a> · <a href="/bolao/">World Cup pool</a></p>
+</main></body></html>
