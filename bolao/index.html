@@ -1,12 +1,55 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>World Cup pool · José Delfim</title>
-<style>body{margin:0;font:17px/1.5 system-ui,sans-serif;color:#1c1c1c;background:#fafafa}main{max-width:680px;margin:0 auto;padding:48px 20px 64px}h1{font-size:1.8rem;margin:0 0 4px}.sub{color:#555;margin:0 0 24px}p{margin:0 0 16px}a{color:#0b57a4}table{border-collapse:collapse;margin:16px 0;font-size:.95rem}td,th{border:1px solid #ddd;padding:6px 10px;text-align:left}th{background:#eee}</style></head>
-<body><main>
-<h1>World Cup 2026 pool</h1>
-<p class="sub">A self-updating prediction pool for the whole agency · built with JavaScript and a live scores API</p>
-<p>During the World Cup, the whole agency talks about football, and not only about Brazil's matches. I built a pool so that everyone could predict every game and follow the standings without anyone having to update anything by hand.</p>
-<p>Each participant enters their predictions once. A script pulls the real scores from a football API as matches end, applies the scoring rules and recalculates the ranking and the tie-breakers. A second version covered the knockout stage.</p>
-<table><tr><th>Rule</th><th>Points</th></tr><tr><td>Exact score of both teams</td><td>5</td></tr><tr><td>Right winner or draw, wrong score</td><td>3</td></tr><tr><td>Right number of goals for one team</td><td>1</td></tr></table>
-<p>Tie-breakers, in order: total points, most exact scores, most correct results, most correct one-side goals, most valid predictions.</p>
-<p>Why it matters to me: it was a small tool, but it changed the mood of the office for a month. Twenty colleagues used it every day, and it was the first thing I built that other people depended on.</p>
-<p><a href="/">← Back</a> · <a href="/zezoffice/">ZezOffice</a> · <a href="/ezfuze/">EzFuze</a> · <a href="/takes/">Takes checklist</a></p>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Cup 2026 pool · José Delfim</title>
+<meta name="description" content="A self-updating World Cup prediction pool for a whole agency, built with Google Sheets, JavaScript and a live scores API.">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main>
+  <nav class="nav"><a href="/">José Delfim</a><a href="/zezoffice/">ZezOffice</a><a href="/ezfuze/">EzFuze</a><a class="on" href="/bolao/">World Cup pool</a><a href="/takes/">Takes checklist</a></nav>
+
+  <section class="hero bolao">
+    <h1>A World Cup pool that <b>keeps score by itself</b></h1>
+    <p>Twenty colleagues, every match of the tournament, zero manual updates. Built for the whole agency with Google Sheets, JavaScript and a live scores API.</p>
+    <div class="tags"><span>Google Sheets</span><span>JavaScript</span><span>Football scores API</span><span>Group stage + knockout</span></div>
+  </section>
+
+  <div class="grid three">
+    <div class="card"><div class="big">20</div><b>participants</b>Everyone in the agency, not just the football fans.</div>
+    <div class="card"><div class="big">104</div><b>matches</b>Every game of the tournament, not only Brazil's.</div>
+    <div class="card"><div class="big">0</div><b>manual updates</b>Scores arrive from the API; points and ranking recalculate alone.</div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><b>Predict once.</b> Each participant fills a column with a score for every match before kick-off.</div>
+    <div class="step"><b>Scores arrive.</b> A script calls a football API as matches end and writes the real result next to the predictions.</div>
+    <div class="step"><b>Ranking updates.</b> Points and tie-breakers are recalculated and the ranking tab reorders itself.</div>
+  </div>
+
+  <h2>Scoring rules</h2>
+  <table class="rules">
+    <tr><th>Rule</th><th>Points</th></tr>
+    <tr><td>Exact score of both teams</td><td class="pts">5</td></tr>
+    <tr><td>Right winner or draw, wrong score</td><td class="pts">3</td></tr>
+    <tr><td>Right number of goals for one of the teams</td><td class="pts">1</td></tr>
+  </table>
+  <p style="margin-top:12px;color:var(--muted)">Tie-breakers, in order: total points, most exact scores, most correct results, most correct one-side goals, most valid predictions.</p>
+
+  <h2>What it looks like</h2>
+  <figure><img src="regras.png" alt="Rules, participant list and tie-breakers tab of the pool spreadsheet"><figcaption>Rules, participants and tie-breakers. Names removed for this page.</figcaption></figure>
+  <div class="grid two">
+    <figure><img src="grade.png" alt="Prediction grid: one row per match, one column per participant"><figcaption>The prediction grid: one row per match, one column per participant, results in the middle.</figcaption></figure>
+    <figure><img src="ranking.png" alt="Ranking tab with position, points and tie-breakers"><figcaption>The ranking tab, recalculated after every result. A second version ran the knockout stage.</figcaption></figure>
+  </div>
+
+  <h2>Why it matters</h2>
+  <p>During a World Cup, a Brazilian agency talks about football all day. This small tool turned that into something shared: everyone checked the ranking every morning, argued about the tie-breakers and followed matches they would otherwise skip.</p>
+  <p class="quote">It was the first thing I built that other people depended on every day.</p>
+
+  <footer>José Delfim · <a href="/">home</a> · <a href="https://www.linkedin.com/in/josedelfim">LinkedIn</a></footer>
+</main>
+</body>
+</html>

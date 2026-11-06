@@ -1,15 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Takes checklist · José Delfim</title>
-<style>body{margin:0;font:17px/1.5 system-ui,sans-serif;color:#1c1c1c;background:#fafafa}main{max-width:680px;margin:0 auto;padding:48px 20px 64px}h1{font-size:1.8rem;margin:0 0 4px}.sub{color:#555;margin:0 0 24px}p{margin:0 0 16px}a{color:#0b57a4}pre{background:#f0f0f0;border:1px solid #ddd;padding:12px;font-size:.9rem;overflow:auto}table{border-collapse:collapse;margin:16px 0;font-size:.95rem}td,th{border:1px solid #ddd;padding:6px 10px;text-align:left}th{background:#eee}</style></head>
-<body><main>
-<h1>Takes checklist</h1>
-<p class="sub">A spreadsheet that reads the shooting notes and organizes every take for the whole team · Google Sheets + script</p>
-<p>On a shoot, someone writes down what was filmed in a plain notes file: scene, place, light, camera card. That is fast on set, but useless later when the editor asks "do we have the sunrise shot?".</p>
-<p>I built a spreadsheet that pulls from that notes file by itself, splits each line into fields, removes technical duplicates and sorts everything by date. The team gets one clean checklist: what was captured, where, in which light, on which card. Nobody retypes anything.</p>
-<p>Sample of what a notes line becomes (fictional data):</p>
-<pre>08/16 - wide shot of the old bridge at sunset, people walking, lamps turning on - card01</pre>
-<table><tr><th>Date</th><th>Scene</th><th>Place</th><th>Light</th><th>File</th></tr>
-<tr><td>08/16</td><td>Wide shot of the old bridge, people walking, lamps turning on</td><td>Old town, bridge</td><td>Sunset</td><td>card01</td></tr>
-<tr><td>08/17</td><td>Harvest close-ups, workers on the truck</td><td>Farm</td><td>Morning</td><td>card02</td></tr></table>
-<p>In the production it was built for, it catalogued a few hundred takes and became the reference the whole crew used to check coverage before wrapping a location.</p>
-<p><a href="/">← Back</a> · <a href="/zezoffice/">ZezOffice</a> · <a href="/ezfuze/">EzFuze</a> · <a href="/bolao/">World Cup pool</a></p>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Takes checklist · José Delfim</title>
+<meta name="description" content="A spreadsheet that reads plain shooting notes and turns them into an organized, de-duplicated checklist of every take for the whole crew.">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main>
+  <nav class="nav"><a href="/">José Delfim</a><a href="/zezoffice/">ZezOffice</a><a href="/ezfuze/">EzFuze</a><a href="/bolao/">World Cup pool</a><a class="on" href="/takes/">Takes checklist</a></nav>
+
+  <section class="hero takes">
+    <h1>Shooting notes in, <b>organized checklist out</b></h1>
+    <p>On set, someone types what was filmed into a plain notes file. The spreadsheet reads that file by itself, splits each line into fields, removes duplicates and sorts by date. Nobody retypes anything.</p>
+    <div class="tags"><span>Google Sheets</span><span>Script</span><span>Plain-text notes</span><span>Whole crew</span></div>
+  </section>
+
+  <div class="grid three">
+    <div class="card"><div class="big">1</div><b>notes file</b>Written on set, on a phone, in whatever order things happen.</div>
+    <div class="card"><div class="big">5</div><b>fields per take</b>Date, scene, place, light, camera card. Extracted automatically.</div>
+    <div class="card"><div class="big">100s</div><b>takes catalogued</b>In the production it was built for, a few hundred takes, with duplicates removed.</div>
+  </div>
+
+  <h2>From notes to checklist</h2>
+  <p>A line typed on set (fictional sample):</p>
+  <div class="notes">08/16 - wide shot of the old bridge at sunset, people walking, lamps turning on - old town - card01
+08/16 - popcorn seller portrait - old town - card01
+08/17 - harvest close-ups, workers on the truck - farm, morning - card02
+08/17 - harvest close-ups, workers on the truck - farm, morning - card02   (duplicate, removed)</div>
+  <div class="arrow">↓</div>
+  <div class="sheet">
+    <div class="bar"><i></i><span>Takes checklist — automatic</span><span class="light">· updates when the notes change</span></div>
+    <div class="wrap">
+    <table>
+      <thead><tr><th></th><th>Date</th><th>Scene</th><th>Place</th><th>Light</th><th>File</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>08/16</td><td>Wide shot of the old bridge, people walking, lamps turning on</td><td>Old town, bridge</td><td>Sunset</td><td>card01</td></tr>
+        <tr><td>2</td><td>08/16</td><td>Popcorn seller, portrait</td><td>Old town</td><td>Sunset</td><td>card01</td></tr>
+        <tr><td>3</td><td>08/17</td><td>Harvest close-ups, workers on the truck</td><td>Farm</td><td>Morning</td><td>card02</td></tr>
+        <tr><td>4</td><td>08/17</td><td>Drone: river and bridge at dawn</td><td>Riverside</td><td>Dawn</td><td>drone-01</td></tr>
+        <tr><td>5</td><td>08/18</td><td>Interview, two cameras, living room</td><td>House</td><td>Afternoon</td><td>camA / camB</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="tabs"><span class="on">GENERAL</span><span>By place</span><span>By day</span><span>Missing</span></div>
+  </div>
+
+  <h2>Why it matters</h2>
+  <div class="grid two">
+    <div class="card"><b>For the crew</b>Before wrapping a location, anyone can check coverage: do we have the sunrise shot? Which card is it on?</div>
+    <div class="card"><b>For the edit</b>The editor starts from a clean list instead of scrolling through notes, and nothing filmed gets forgotten.</div>
+  </div>
+  <p class="quote">The trick is not the spreadsheet. It is letting people write the way they already write on set, and doing the organizing for them.</p>
+
+  <footer>José Delfim · <a href="/">home</a> · <a href="https://www.linkedin.com/in/josedelfim">LinkedIn</a></footer>
+</main>
+</body>
+</html>
