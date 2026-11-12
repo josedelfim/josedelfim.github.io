@@ -1,0 +1,396 @@
+{
+  "default_language": "en",
+  "languages": [
+    "en",
+    "pt"
+  ],
+  "author": "Zé Delfim — concept, art direction, rules, decisions and review; development assisted by AI; source art generated with the documented tools. External references are not claimed as original creations.",
+  "milestones": [
+    {
+      "id": "origin",
+      "date": "2026-10-17",
+      "date_precision": "day",
+      "entity": "App",
+      "title": {
+        "en": "A personal world for everyday tasks",
+        "pt": "Um mundo pessoal para as tarefas"
+      },
+      "description": {
+        "en": "Zé reports the project began on this date.",
+        "pt": "Zé informa que o projeto começou nesta data."
+      },
+      "problem": {
+        "en": "Fragmented routines.",
+        "pt": "Rotinas fragmentadas."
+      },
+      "decision": {
+        "en": "Combine tools with characters and a shared house.",
+        "pt": "Combinar ferramentas com personagens e uma casa compartilhada."
+      },
+      "result": {
+        "en": "A product direction, not proof that all later features existed then.",
+        "pt": "Direção do produto, sem atribuir todas as funções posteriores a essa data."
+      },
+      "stage": "conceived",
+      "version_ids": [],
+      "evidence_ids": [
+        "USER-START-DATE"
+      ],
+      "media": [],
+      "before_after": null
+    },
+    {
+      "id": "layered-house",
+      "date": "2026-10-24",
+      "date_precision": "day",
+      "entity": "Casa",
+      "title": {
+        "en": "From a painted scene to a layered house",
+        "pt": "Da cena pintada à casa em camadas"
+      },
+      "description": {
+        "en": "The C3 kit and corrected SE walk received visual approval.",
+        "pt": "O kit C3 e a caminhada SE corrigida receberam aprovação visual."
+      },
+      "problem": {
+        "en": "Moving furniture exposed holes in a flattened image.",
+        "pt": "Mover móveis expunha buracos na imagem achatada."
+      },
+      "decision": {
+        "en": "Separate floor, furniture, shadows and walking mask.",
+        "pt": "Separar piso, móveis, sombras e máscara de circulação."
+      },
+      "result": {
+        "en": "An approved historical branch, superseded by the current bunker.",
+        "pt": "Uma etapa aprovada histórica, superada pelo bunker atual."
+      },
+      "stage": "implemented",
+      "version_ids": [
+        "HIST-C3"
+      ],
+      "evidence_ids": [
+        "casa:16",
+        "casa:17"
+      ],
+      "media": [
+        "media/casa-c3-historica.png"
+      ],
+      "before_after": null
+    },
+    {
+      "id": "mobile-atlas",
+      "date": "2026-10-26",
+      "date_precision": "day",
+      "entity": "App",
+      "title": {
+        "en": "Making the house load on mobile",
+        "pt": "Fazer a casa abrir no celular"
+      },
+      "description": {
+        "en": "Many sequential image requests made the scene slow.",
+        "pt": "Muitas requisições sequenciais tornavam a cena lenta."
+      },
+      "problem": {
+        "en": "256 image requests and misleading loading feedback.",
+        "pt": "256 requisições e carregamento que escondia a demora."
+      },
+      "decision": {
+        "en": "Pack sprites into an atlas; show errors and real loading progress.",
+        "pt": "Agrupar sprites em atlas e mostrar os erros e a espera real."
+      },
+      "result": {
+        "en": "A documented performance fix; historical benchmark, not remeasured here.",
+        "pt": "Correção documentada; desempenho histórico não medido novamente nesta coleta."
+      },
+      "stage": "verified-historically",
+      "version_ids": [
+        "HIST-C3"
+      ],
+      "evidence_ids": [
+        "casa:38"
+      ],
+      "media": [
+        "media/casa-c3-historica.png"
+      ],
+      "before_after": null
+    },
+    {
+      "id": "side-branch",
+      "date": "2026-10-27",
+      "date_precision": "day",
+      "entity": "Casa",
+      "title": {
+        "en": "A side-view experiment",
+        "pt": "Uma experiência em corte lateral"
+      },
+      "description": {
+        "en": "A shelter-like layout explored floors, rooms and a lift.",
+        "pt": "A fase de abrigo explorou andares, salas e elevador."
+      },
+      "problem": {
+        "en": "Explore a clearer modular structure.",
+        "pt": "Explorar uma estrutura modular mais clara."
+      },
+      "decision": {
+        "en": "Try a side-view branch and a cutout rig.",
+        "pt": "Testar uma ramificação lateral e rig por peças."
+      },
+      "result": {
+        "en": "Historical prototype; this visual direction was later closed.",
+        "pt": "Protótipo histórico; essa direção foi depois encerrada."
+      },
+      "stage": "prototyped",
+      "version_ids": [
+        "HIST-SIDE"
+      ],
+      "evidence_ids": [
+        "casa:53",
+        "casa:57"
+      ],
+      "media": [],
+      "before_after": null
+    },
+    {
+      "id": "cifrao-movement",
+      "date": "2026-10-28",
+      "date_precision": "day",
+      "entity": "Cifrao",
+      "title": {
+        "en": "Preserving identity in motion",
+        "pt": "Preservar a identidade em movimento"
+      },
+      "description": {
+        "en": "Zé approved normal walk v5 after expression drift in earlier takes.",
+        "pt": "Zé aprovou o andar normal v5 após desvios de expressão nas tentativas anteriores."
+      },
+      "problem": {
+        "en": "A generated walk changed the approved facial expression.",
+        "pt": "A caminhada gerada alterava a expressão aprovada."
+      },
+      "decision": {
+        "en": "Use the approved face as the start and end reference.",
+        "pt": "Usar o rosto aprovado como referência inicial e final."
+      },
+      "result": {
+        "en": "Approved historical walk; current production uses the top-down set.",
+        "pt": "Caminhada histórica aprovada; produção atual usa o conjunto de cima."
+      },
+      "stage": "approved-superseded",
+      "version_ids": [
+        "1tClLzmRtxANObS3Sz5Acu19g6GipffwD"
+      ],
+      "evidence_ids": [
+        "casa:96",
+        "casa:98"
+      ],
+      "media": [],
+      "before_after": null
+    },
+    {
+      "id": "seven-identities",
+      "date": "2026-10-29",
+      "date_precision": "day",
+      "entity": "Personagens",
+      "title": {
+        "en": "A shared style, distinct identities",
+        "pt": "Estilo comum, identidades distintas"
+      },
+      "description": {
+        "en": "Texture and skin revisions refined the cast; later choices completed it.",
+        "pt": "Revisões de textura e pele refinaram o elenco; escolhas posteriores o completaram."
+      },
+      "problem": {
+        "en": "Characters did not yet share a consistent material language.",
+        "pt": "Os personagens ainda não tinham uma linguagem de textura consistente."
+      },
+      "decision": {
+        "en": "Keep personality, anatomy and costume while refining style.",
+        "pt": "Preservar personalidade, anatomia e traje ao refinar o estilo."
+      },
+      "result": {
+        "en": "Current bases verified by hash; Zehauze approved on 30 Oct, Zezen on 31 Oct.",
+        "pt": "Bases atuais conferidas por hash; Zehauze aprovado em 30/10 e Zezen em 31/10."
+      },
+      "stage": "verified",
+      "version_ids": [
+        "1gem1DMgbqCgxI76O-UnqZ3Q600Toa1yX",
+        "1pBnR2CVfEmkziN4jI-svZlXYLKotPNd7",
+        "1XNrR82nY969U3iUyVsLgoq4HJ6SXh--M",
+        "1BksKtUEgiChS90iHYgEG9g6b2BDBQXiD",
+        "1qi87N4e-uIfXf6ct0w-LxKZhkK5jlGE-",
+        "1qfheI6TcAaw9pzFtXwLfG3QmulUayur7",
+        "1XcCBravr8XbEcmpjNR1vPkqRrZh7hAWb"
+      ],
+      "evidence_ids": [
+        "casa:164",
+        "casa:166",
+        "casa:204",
+        "casa:211"
+      ],
+      "media": [
+        "media/1gem1DMgbqCgxI76O-UnqZ3Q600Toa1yX.png",
+        "media/1pBnR2CVfEmkziN4jI-svZlXYLKotPNd7.png",
+        "media/1XNrR82nY969U3iUyVsLgoq4HJ6SXh--M.png",
+        "media/1BksKtUEgiChS90iHYgEG9g6b2BDBQXiD.png",
+        "media/1qi87N4e-uIfXf6ct0w-LxKZhkK5jlGE-.png",
+        "media/1qfheI6TcAaw9pzFtXwLfG3QmulUayur7.png",
+        "media/1XcCBravr8XbEcmpjNR1vPkqRrZh7hAWb.png"
+      ],
+      "before_after": null
+    },
+    {
+      "id": "voices-pt",
+      "date": "2026-10-30",
+      "date_precision": "day",
+      "entity": "Personalidades",
+      "title": {
+        "en": "Voices return to Brazilian Portuguese",
+        "pt": "As vozes voltam ao português brasileiro"
+      },
+      "description": {
+        "en": "Personas and event rules guide dialogue, with later tone refinements.",
+        "pt": "Personas e regras por evento orientam o diálogo, com refinamentos posteriores de tom."
+      },
+      "problem": {
+        "en": "The English corpus did not feel right to the creator.",
+        "pt": "O corpus inglês não agradou ao criador."
+      },
+      "decision": {
+        "en": "Rewrite in Portuguese; retain English as an idea bank.",
+        "pt": "Reescrever em português e guardar inglês como banco de ideias."
+      },
+      "result": {
+        "en": "Portuguese installed; the archived specification is not the latest persona sheet.",
+        "pt": "Português instalado; a especificação arquivada não é a ficha mais recente."
+      },
+      "stage": "implemented",
+      "version_ids": [
+        "190Ndohi9dTCvUf-sMJ1jgKrhFe4FOiK2"
+      ],
+      "evidence_ids": [
+        "geral:100",
+        "geral:102"
+      ],
+      "media": [],
+      "before_after": null
+    },
+    {
+      "id": "top-down",
+      "date": "2026-10-30",
+      "date_precision": "day",
+      "entity": "Casa",
+      "title": {
+        "en": "The top-down bunker",
+        "pt": "O bunker visto de cima"
+      },
+      "description": {
+        "en": "Approved rooms became the default house kit.",
+        "pt": "As salas aprovadas passaram a compor o kit padrão da casa."
+      },
+      "problem": {
+        "en": "Camera, scale and circulation had to work together.",
+        "pt": "Câmera, escala e circulação precisavam funcionar juntas."
+      },
+      "decision": {
+        "en": "Use top-down rooms and eight-direction character movement.",
+        "pt": "Usar salas vistas de cima e movimentos em oito direções."
+      },
+      "result": {
+        "en": "An integrated house; room materials and the living room were refined next.",
+        "pt": "Casa integrada; materiais e sala de estar foram refinados depois."
+      },
+      "stage": "in-use",
+      "version_ids": [
+        "HIST-TOPO",
+        "CURRENT-BUNKER-20261103"
+      ],
+      "evidence_ids": [
+        "casa:186",
+        "casa:194"
+      ],
+      "media": [],
+      "before_after": null
+    },
+    {
+      "id": "inhabited",
+      "date": "2026-10-31",
+      "date_precision": "day",
+      "entity": "Casa",
+      "title": {
+        "en": "Materials, breathing and a living room",
+        "pt": "Materiais, respiração e sala de estar"
+      },
+      "description": {
+        "en": "Quiet floors, individual rooms and calmer breathing replaced noisy experiments.",
+        "pt": "Pisos mais calmos, identidade por sala e respiração lenta substituíram testes ruidosos."
+      },
+      "problem": {
+        "en": "Colored overlays and fast breathing felt wrong.",
+        "pt": "Luzes coloridas e respiração rápida pareciam estranhas."
+      },
+      "decision": {
+        "en": "Disable the overlay, refine room materials and assemble the living room.",
+        "pt": "Desligar a lavagem de cor, refinar materiais e montar a sala de estar."
+      },
+      "result": {
+        "en": "13 rooms; five characters animate, two cats inhabit the scene.",
+        "pt": "13 salas; cinco personagens animados e dois gatos na cena."
+      },
+      "stage": "in-use",
+      "version_ids": [
+        "CURRENT-BUNKER-20261103"
+      ],
+      "evidence_ids": [
+        "COMMIT-c79429d9",
+        "COMMIT-068ee2f4",
+        "COMMIT-1eaa7738"
+      ],
+      "media": [
+        "media/materiais-salas-estudo.png",
+        "media/bunker-visao.png",
+        "media/movimento-contexto.gif"
+      ],
+      "before_after": null
+    },
+    {
+      "id": "identity-review",
+      "date": "2026-11-03",
+      "date_precision": "day",
+      "entity": "App",
+      "title": {
+        "en": "Identity remains the acceptance criterion",
+        "pt": "Identidade como critério de aceite"
+      },
+      "description": {
+        "en": "The v1 interface study and the Pixel v2 restudy were rejected.",
+        "pt": "O estudo de interface v1 e o reestudo Pixel v2 foram reprovados."
+      },
+      "problem": {
+        "en": "A cleaner screen had lost the pixel-art game identity.",
+        "pt": "Uma tela mais limpa perdera a identidade de jogo em pixel art."
+      },
+      "decision": {
+        "en": "Keep both rejected studies as history; use the approved current bunker as the visual reference.",
+        "pt": "Preservar ambos os estudos reprovados no histórico; usar o bunker atual aprovado como referência visual."
+      },
+      "result": {
+        "en": "Pixel v2 is not a current proposal or an approved direction. Its rejection was confirmed by the creator; the original rejection date is not established.",
+        "pt": "Pixel v2 não é proposta vigente nem direção aprovada. A reprovação foi confirmada pelo criador; a data original dessa decisão não foi estabelecida."
+      },
+      "stage": "rejected",
+      "version_ids": [
+        "1XIQHVc44A2ayJpOnn1tg387W4LvZRN1g",
+        "1t5E4_E3JpdpUhiiVzSp5wdwF1NBG2T3o"
+      ],
+      "evidence_ids": [
+        "USER-REJECTION-V1",
+        "USER-REJECTION-PIXEL-V2-CONFIRMED-20261103"
+      ],
+      "media": [
+        "media/bunker-visao.png"
+      ],
+      "before_after": null,
+      "status_confirmation_date": "2026-11-03"
+    }
+  ]
+}
