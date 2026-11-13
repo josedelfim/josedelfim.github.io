@@ -11,7 +11,7 @@ import {parseReceipt,addInventory,compare,originalFixtureItems,sleepWindow,nextW
 
 // Public, invented fixtures only. UI vocabulary/palette follows the project's
 // ZBum Hoje, Zehauze Hoje, Cifrão RPG and Zept Faturamento source screens.
-const initial=()=>({task:'pantry',module:'zbum',feature:'mochila',detail:false,receipt:'2 x Eggs 12,00\n1 x Rice 8,50\n3 x Yogurt 4,00\nTOTAL 44,50',parsed:[],pantry:{Eggs:6,Rice:4,Yogurt:3,Banana:5,Chicken:4,Beans:4},stored:false,source:'email',purchase:'',category:'',finance:null,items:originalFixtureItems(),checked:false,approved:false,draft:false,reading:null,nightCheck:true,sleep:null,waterDate:'2026-11-01',interval:7,watering:null});
+const initial=()=>({task:'pantry',module:'cifrao',feature:'ficha',detail:false,receipt:'2 x Eggs 12,00\n1 x Rice 8,50\n3 x Yogurt 4,00\nTOTAL 44,50',parsed:[],pantry:{Eggs:6,Rice:4,Yogurt:3,Banana:5,Chicken:4,Beans:4},stored:false,source:'email',purchase:'',category:'',finance:null,items:originalFixtureItems(),checked:false,approved:false,draft:false,reading:null,nightCheck:true,sleep:null,waterDate:'2026-11-01',interval:7,watering:null});
 let data=initial(),en=true,rerender,pendingAction='';
 const name=id=>displayName(id,en?'en':'pt');
 function say(key){data.voice={module:data.module,feature:data.feature,key};}
