@@ -5,47 +5,81 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>José Delfim · Producer building with AI</title>
 <meta name="description" content="Senior integrated producer from Salvador, Brazil, building AI-powered tools: ZezOffice and EzFuze. Also AI video studies.">
+<link rel="icon" href="/zezoffice/brand/favicon-32.png">
 <style>
-  :root{--ink:#1c1c1c;--muted:#555;--line:#ddd;--accent:#0b57a4}
-  body{margin:0;font:17px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fafafa}
-  main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
-  h1{font-size:2rem;margin:0 0 4px}
-  .sub{color:var(--muted);margin:0 0 28px}
-  p{margin:0 0 16px}
-  .video{margin:28px 0;aspect-ratio:16/9;background:#eee;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}
-  .cards{display:grid;gap:16px;grid-template-columns:1fr;margin:28px 0}
-  @media(min-width:560px){.cards{grid-template-columns:1fr 1fr}}
-  .card{border:1px solid var(--line);border-radius:10px;padding:18px;background:#fff;text-decoration:none;color:inherit;display:block}
-  .card:hover{border-color:var(--accent)}
-  .card b{display:block;font-size:1.1rem;margin-bottom:6px}
-  .card span{color:var(--muted)}
-  .links a{color:var(--accent)}
-  footer{color:var(--muted);font-size:.9rem;margin-top:40px}
+  :root{--bg:#0f1014;--ink:#f4f1e8;--lead:#c2c0b8;--eyebrow:#f5c33b;--hl:#f5c33b;--btn:#f5c33b;--btnink:#17130a;--ghostline:#4a4c57;--ghostink:#f4f1e8;--h2:#a9a79f;--card:#191b22;--line:#2c2f3a;--kind:#f5c33b;--text:#bdbbb3;--link:#f5c33b;--foot:#a9a79f;--shadow:rgba(0,0,0,.5)}
+  .hero{padding:44px 0 8px}
+  *{box-sizing:border-box}
+  body{margin:0;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  main{max-width:1040px;margin:0 auto;padding:28px 20px 56px}
+  .eyebrow{margin:0 0 14px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--eyebrow)}
+  h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.01em;max-width:21ch}
+  h1 em{font-style:normal;color:var(--hl)}
+  .lead{margin:0 0 22px;max-width:62ch;color:var(--lead);font-size:1.05rem}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+  .cta a{text-decoration:none;border-radius:999px;padding:9px 18px;font-weight:600;font-size:.95rem}
+  .btn{background:var(--btn);color:var(--btnink)}
+  .ghost{border:1px solid var(--ghostline);color:var(--ghostink)}
+  .ghost:hover{border-color:var(--hl)}
+  h2{font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:var(--h2);margin:40px 0 14px}
+  .grid{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.25fr 1fr}.card.wide img{height:100%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line)}.card.wide .body{align-self:center;padding:28px}.card.wide b{font-size:1.5rem}.card.small{display:grid;grid-template-columns:150px 1fr}.card.small img{height:100%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line)}}
+  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--hl);box-shadow:0 10px 28px var(--shadow)}
+  .card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;border-bottom:1px solid var(--line);background:#111}
+  .card.small img{aspect-ratio:16/7}
+  .body{display:block;padding:18px 20px 20px}
+  .body small{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--kind);margin-bottom:6px}
+  .body b{display:block;font-size:1.2rem;line-height:1.25;margin-bottom:8px}
+  .body span{display:block;color:var(--text)}
+  .body i{display:block;font-style:normal;font-weight:600;margin-top:12px;color:var(--link)}
+  .card.small b{font-size:1.02rem}
+  .card.small .body span{font-size:.95rem}
+  footer{color:var(--foot);font-size:.92rem;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+  @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+
 </style>
 </head>
 <body>
 <main>
-  <h1>José Delfim</h1>
-  <p class="sub">Senior integrated producer · Salvador, Brazil · building with AI</p>
+  <header class="hero">
+    <p class="eyebrow">José Delfim · Salvador, Brazil</p>
+    <h1>8 years producing ad campaigns. <em>Now I build the tools I used to wish for.</em></h1>
+    <p class="lead">Senior integrated producer: budgets, schedules, vendors, approvals and quality checks, from brief to delivery. A hard self-learner, I taught myself to build with AI and now run my daily life and part of my production work on software I made.</p>
+    <p class="cta">
+      <a class="btn" href="mailto:jozedelfim@gmail.com">jozedelfim@gmail.com</a>
+      <a class="ghost" href="https://www.linkedin.com/in/josedelfim">LinkedIn</a>
+      <a class="ghost" href="https://github.com/josedelfim">GitHub</a>
+    </p>
+  </header>
 
-  <p>For more than eight years I have taken advertising work from brief to delivery in agencies: budgets, schedules, vendors, approvals and quality checks.</p>
-  <p>I'm a hard self-learner. In the last months I taught myself to build with AI tools, and I now run my daily life and part of my production work on software I made.</p>
-
-  <div class="video" id="video">Intro video coming soon</div>
-
-  <div class="cards">
-    <a class="card" href="/zezoffice/"><b>ZezOffice</b><span>A game-like app that runs my daily life: five characters, each owning one area, plus rules that check production documents the way I do at work. Interactive demo.</span></a>
-    <a class="card" href="/ezfuze/"><b>EzFuze</b><span>A tool that prepares image-release documents from scanned forms: reads names, matches people to photos, flags uncertain matches, exports named PDFs. Case study.</span></a>
-    <a class="card" href="/video-ai/"><b>Video AI Generations</b><span>Studies with Kling: the same character, costume and set kept consistent from take to take, shown version by version.</span></a>
+  <h2>3 projects built with AI</h2>
+  <div class="grid">
+    <a class="card wide" href="/zezoffice/">
+      <img src="/home/zezoffice.jpg" alt="ZezOffice demo screen: five characters and their panels" loading="lazy">
+      <span class="body"><small>App · interactive demo</small><b>ZezOffice: 5 characters run my daily life</b><span>A game-like app I use every day. Each character owns one area (money, food, home, work, mind), and the work one checks production documents the way I do.</span><i>Open the demo →</i></span>
+    </a>
+    <a class="card " href="/ezfuze/">
+      <img src="/home/ezfuze.jpg" alt="EzFuze case study: a release form next to a portrait" loading="lazy">
+      <span class="body"><small>Mac app · case study</small><b>EzFuze: 20 to 100 release forms matched per batch</b><span>Reads the name on each scanned form, finds the matching photo and sends only the uncertain cases back for review.</span><i>Read the case study →</i></span>
+    </a>
+    <a class="card " href="/video-ai/">
+      <img src="/home/video-ai.jpg" alt="AI-generated take: a woman carrying a bucket on a dirt road" loading="lazy">
+      <span class="body"><small>Kling · 9 videos</small><b>AI video: the same person, clothes and place in 9 takes</b><span>Each piece of the scene built as a reusable reference, then directed take by take like a shoot.</span><i>Watch the takes →</i></span>
+    </a>
   </div>
 
-  <p>Two smaller tools people used at work: <a href="/bolao/">a World Cup pool</a> that updated itself from a live scores API, and <a href="/takes/">a takes checklist</a> that turns shooting notes into an organized spreadsheet.</p>
-
-  <p class="links">
-    <a href="https://www.linkedin.com/in/josedelfim">LinkedIn</a> ·
-    <a href="https://github.com/josedelfim">GitHub</a> ·
-    <a href="mailto:jozedelfim@gmail.com">jozedelfim@gmail.com</a>
-  </p>
+  <h2>2 smaller tools my colleagues used at work</h2>
+  <div class="grid">
+    <a class="card small" href="/bolao/">
+      <img src="/home/bolao.jpg" alt="World Cup pool ranking spreadsheet" loading="lazy">
+      <span class="body"><small>Google Sheets · scores API</small><b>World Cup pool: 20 colleagues, 104 matches, 0 manual updates</b><span>Scores arrived from a live API; points and ranking recalculated alone.</span><i>See how →</i></span>
+    </a>
+    <a class="card small" href="/takes/">
+      <img src="/home/takes.jpg" alt="Takes checklist spreadsheet" loading="lazy">
+      <span class="body"><small>Google Sheets · script</small><b>Takes checklist: 1 notes file in, hundreds of takes organized</b><span>Notes typed on set become a sorted, de-duplicated checklist.</span><i>See how →</i></span>
+    </a>
+  </div>
 
   <footer>Fluent in English, native in Portuguese. Open to remote roles, any time zone.</footer>
 </main>
